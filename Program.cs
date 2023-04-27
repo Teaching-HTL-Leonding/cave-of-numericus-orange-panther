@@ -1,4 +1,7 @@
-﻿const int NUMBER_OF_STONES = 20;
+﻿const int NUMBER_OF_STONES = 75000;
+const int MIN_RANDOM = 1;
+const int MAX_RANDOM = 100 + 1;
+
 var randomNumbers = GenerateRandomArray();
 Array.Sort(randomNumbers);
 double averageDistane = CalculateAverageDistance(randomNumbers);
@@ -10,7 +13,7 @@ int[] GenerateRandomArray()
     var randomNumbers = new int[20];
     for (int i = 0; i < NUMBER_OF_STONES; i++)
     {
-        randomNumbers[i] = Random.Shared.Next(1, 101);
+        randomNumbers[i] = Random.Shared.Next(MIN_RANDOM, MAX_RANDOM);
         //randomNumbers[i] = rand.Next(1, 101);
     }
     return randomNumbers;
