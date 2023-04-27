@@ -9,12 +9,12 @@ Console.WriteLine($"average distance: {averageDistane:n5}");
 
 int[] GenerateRandomArray()
 {
-    //var rand = new Random(4711);
+    // var rand = new Random(4711);
     var randomNumbers = new int[NUMBER_OF_STONES];
     for (int i = 0; i < NUMBER_OF_STONES; i++)
     {
         randomNumbers[i] = Random.Shared.Next(MIN_RANDOM, MAX_RANDOM);
-        //randomNumbers[i] = rand.Next(1, 101);
+        // randomNumbers[i] = rand.Next(MIN_RANDOM, MAX_RANDOM);
     }
     return randomNumbers;
 }
